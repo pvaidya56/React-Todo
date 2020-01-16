@@ -2,7 +2,11 @@ import React from 'react';
 
 const Todo = props => {
     return (
-        <div>
+        <div
+        className={`task${props.task.purchased ? " purchased" : ""}`}
+        onClick={e => {
+            props.toggleTask(props.task.id);
+        }}>
             {props.item.name}
         </div>
     );
