@@ -8,8 +8,9 @@ body {
 }
 
 body {
-  background-color: #2d2d37;
+  background-color: #ADD8E6;
 }
+
 
 h1,
 h2,
@@ -49,7 +50,7 @@ h1 {
   margin: 0 auto;
 }
 .task {
-  background-color: #e64944;
+  background-color: #ffb6b9;
   width: 45%;
   text-align: left;
   margin: 4px 0;
@@ -67,30 +68,29 @@ form {
   justify-content: flex-end;
 }
 form > input {
-  background-color: #2d2d37;
+  background-color: #bbded6;
   border: 0;
   padding: 6px 0;
   font-size: 1rem;
   width: 240px;
+  font-weight: bold;
   outline: 0;
-  color: white;
-  border-bottom: 1px solid #e64944;
+  color: red;
+  border-bottom: 1px solid #d17d7c;
   margin-right: 8px;
 }
 
 button {
-  background-color: #e64944;
-  border: 1px solid #e64944;
+  background-color: #ffb6b9;
+  border: 1px solid #d17d7c;
   color: white;
   font-size: 16px;
-  padding: 6px 14px;
+  padding: 5px 12px;
+  cursor: pointer;
 }
 
 input::placeholder {
-  color: #e64944;
+  color: #d17d7c;
   opacity: 1;
 }
 
-.clear-btn {
-  margin-top: 16px;
-}
