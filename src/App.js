@@ -10,18 +10,19 @@ class App extends React.Component {
     // console.log(this.state);
   };
    
-  toggleTask= taskId => {
+  toggleTask = taskId => {
+    console.log("From toggle Item", taskId)
     this.setState({
-      list: this.state.list.map(item => {
-        if (taskId === item.id) {
+      list: this.state.list.map(task => {
+        if (taskId === task.id) {
           return {
-            ...item,
-            purchased: !item.purchased
+            ...task,
+            completed: !task.completed
           };
         }
-        return item;
+        return task;
       })
-    })
+    });
   }
 
   addTask = taskText => {
@@ -45,7 +46,7 @@ class App extends React.Component {
           <h2>What's on your TODO List?</h2>
           <TodoForm addTask={this.addTask}/>
         </div>
-        <TodoList list={this.state.list}/>
+        <TodoList list={this.state.list} toggleTask={this.toggleTask}/>
 
       </div>
     );
