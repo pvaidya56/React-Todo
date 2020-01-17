@@ -1,12 +1,13 @@
 import React from 'react';
-import { list } from './data';
 import TodoList from './components/TodoComponents/TodoList'
 import TodoForm from './components/TodoComponents/TodoForm'
 import "./Todo.css"
 class App extends React.Component {
   constructor(){
     super();
-    this.state = {list}
+    this.state = {
+      list: []
+    };
     // console.log(this.state);
   };
    
@@ -28,7 +29,7 @@ class App extends React.Component {
   addTask = taskText => {
     const newTask = {
       name: taskText,
-      purchased: false,
+      completed: false,
       id: Date.now()
     };
     this.setState({
@@ -50,7 +51,7 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h2>What's on your TODO List?</h2>
-          <TodoForm addTask={this.addTask} clearCompleted={this.clearCompleted}/>
+          <TodoForm addTask={this.addTask} list={this.state.list} clearCompleted={this.clearCompleted}/>
         </div>
         <TodoList list={this.state.list} toggleTask={this.toggleTask} />
 
