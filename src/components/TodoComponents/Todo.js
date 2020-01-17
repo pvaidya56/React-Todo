@@ -3,11 +3,11 @@ import React from 'react';
 const Todo = props => {
     return (
         <div
-        className={`item${props.item.completed ? " completed" : ""}`}
+        className={`task${props.task.completed ? " completed" : ""}`}
         onClick={e => {
-            props.toggleTask(props.item.id);
+            props.toggleTask(props.task.id);
         }}>
-            {props.item.name}
+            {props.task.name}
         </div>
     );
 }

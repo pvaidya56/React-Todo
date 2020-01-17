@@ -35,6 +35,12 @@ class App extends React.Component {
       list: [...this.state.list, newTask]
     })
   }
+
+ clearCompleted = () => {
+    this.setState({
+      list: this.state.list.filter(task => !task.completed)
+    })
+  }
   
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
@@ -44,9 +50,9 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h2>What's on your TODO List?</h2>
-          <TodoForm addTask={this.addTask}/>
+          <TodoForm addTask={this.addTask} clearCompleted={this.clearCompleted}/>
         </div>
-        <TodoList list={this.state.list} toggleTask={this.toggleTask}/>
+        <TodoList list={this.state.list} toggleTask={this.toggleTask} />
 
       </div>
     );
