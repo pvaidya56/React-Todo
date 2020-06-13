@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  background-color: #ADD8E6;
+  background-color: grey;
 }
 
 
@@ -42,7 +42,7 @@ h1 {
   text-align: left;
 }
 
-.shopping-list {
+.list {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
